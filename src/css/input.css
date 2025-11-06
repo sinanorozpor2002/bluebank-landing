@@ -10,3 +10,55 @@
     src: url(../fonts/YekanBakh-Regular.woff2);
   }
 }
+
+@layer components {
+  .custom-divider::before {
+    @apply absolute content-[''] right-0 top-0 translate-y-2 w-8 h-[3px] bg-gray-500 transition-all duration-300 ease-in-out;
+  }
+
+  .custom-divider::after {
+    @apply absolute content-[''] right-0 top-0 -translate-y-2 w-8 h-[3px] bg-gray-500 transition-all duration-300 ease-in-out;
+  }
+
+  .custom-divider.custom-divider--toggle {
+    @apply bg-transparent;
+  }
+
+  .custom-divider.custom-divider--toggle::before {
+    @apply rotate-45 -translate-y-0 translate-x-[3px];
+  }
+
+  .custom-divider.custom-divider--toggle::after {
+    @apply -rotate-45 -translate-y-0 translate-x-[3px];
+  }
+
+  .hamburger {
+    @apply border-[3px]  w-auto  border-solid px-2 py-4 border-border-menu rounded-[10px];
+  }
+
+  /* زیرمنوی خدمات (Mega Menu) */
+  .services-dropdown {
+    @apply desktop:absolute desktop:left-0 desktop:right-0 desktop:w-[1200px] desktop:translate-y-10 desktop:translate-x-32  desktop:rounded-[20px];
+  }
+
+  /* زیرمنوی وام */
+  .loan-dropdown {
+    @apply desktop:gap-6 desktop:absolute desktop:left-0 desktop:right-0 desktop:w-[300px] desktop:h-[200px] desktop:translate-y-10 desktop:translate-x-32  desktop:rounded-[20px];
+  }
+
+  /* زیرمنوی تماس با ما */
+  .contact-dropdown {
+    @apply desktop:gap-4 desktop:absolute desktop:left-0 desktop:right-0 desktop:w-[300px] desktop:h-[200px] desktop:translate-y-10 desktop:translate-x-32  desktop:rounded-[20px];
+  }
+
+  .hover-underline:hover::before {
+    @apply absolute content-[''] -bottom-2 left-0 right-0 mx-auto w-full h-[4px] bg-brand-accent scale-0 rounded-full 
+               transition-transform duration-300 ease-in-out;
+  }
+
+  /* حالت هاور: نمایان شدن */
+  .hover-underline:hover::before {
+    /* هنگام هاور: مقیاس کامل (نمایان) */
+    @apply scale-100;
+  }
+}
