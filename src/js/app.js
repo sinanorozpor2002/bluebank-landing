@@ -175,3 +175,106 @@ document.addEventListener("click", () => {
 toggleMenu("parent-li", "child-ul", "services-dropdown"); // اگر ID اصلی "parent-li" است
 toggleMenu("loan-parent", "loan-child", "loan-dropdown");
 toggleMenu("contact-parent", "contact-child", "contact-dropdown");
+
+// اسلایدر
+
+document.addEventListener("DOMContentLoaded", () => {
+  // انتخابگرها ... (بدون تغییر)
+  const swiperContainer = document.querySelector(".mySwiper");
+  const prevButton = swiperContainer.querySelector(".swiper-button-prev");
+  const nextButton = swiperContainer.querySelector(".swiper-button-next");
+  const slides = swiperContainer.querySelectorAll(".swiper-slide");
+  const paginationDots = swiperContainer.querySelectorAll(".pagination-dot");
+
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  let autoplayInterval;
+  const AUTOPLAY_DELAY = 4000;
+
+  // --- تابع اصلی: جابجایی اسلاید با لوپ ---
+  function goToSlide(index) {
+    let targetIndex;
+
+    // منطق لوپ (گردش):
+    if (index >= totalSlides) {
+      targetIndex = 0; // از آخر به اول
+    } else if (index < 0) {
+      targetIndex = totalSlides - 1; // از اول به آخر
+    } else {
+      targetIndex = index; // اسلاید عادی
+    }
+
+    currentSlide = targetIndex;
+
+    // جابجایی با Scroll
+    slides[currentSlide].scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+    });
+
+    updatePagination();
+    updateNavigation();
+  }
+
+  // --- Autoplay و تعامل ماوس ---
+  function startAutoplay() {
+    clearInterval(autoplayInterval);
+    autoplayInterval = setInterval(() => {
+      goToSlide(currentSlide + 1);
+    }, AUTOPLAY_DELAY);
+  }
+
+  function pauseAutoplay() {
+    clearInterval(autoplayInterval);
+  }
+
+  // --- به‌روزرسانی Pagination (بدون تغییر) ---
+  function updatePagination() {
+    paginationDots.forEach((dot, index) => {
+      if (index === currentSlide) {
+        dot.classList.add("w-6", "bg-brand");
+        dot.classList.remove("w-2", "bg-brand-light");
+      } else {
+        dot.classList.add("w-2", "bg-brand-light");
+        dot.classList.remove("w-6", "bg-brand");
+      }
+    });
+  }
+
+  // --- به‌روزرسانی Navigation (برای لوپ غیرفعال نمی‌شود) ---
+  function updateNavigation() {
+    prevButton.classList.remove("opacity-50", "pointer-events-none");
+    nextButton.classList.remove("opacity-50", "pointer-events-none");
+    // می‌توانید در اینجا کلاس‌هایی برای ظاهر بهتر دکمه‌ها اعمال کنید
+  }
+
+  // --- شنوندگان رویداد ---
+  nextButton.addEventListener("click", () => {
+    pauseAutoplay();
+    goToSlide(currentSlide + 1);
+    startAutoplay();
+  });
+
+  prevButton.addEventListener("click", () => {
+    pauseAutoplay();
+    goToSlide(currentSlide - 1);
+    startAutoplay();
+  });
+
+  swiperContainer.addEventListener("mouseover", pauseAutoplay);
+  swiperContainer.addEventListener("mouseleave", startAutoplay);
+
+  // --- کلیک روی Pagination ---
+  paginationDots.forEach((dot) => {
+    dot.addEventListener("click", (event) => {
+      const index = parseInt(event.target.getAttribute("data-index"));
+      pauseAutoplay();
+      goToSlide(index);
+      startAutoplay();
+    });
+  });
+
+  // شروع
+  goToSlide(0);
+  startAutoplay();
+});

@@ -49,6 +49,21 @@ module.exports = {
           menu: "#00000026",
         },
       },
+
+      keyframes: {
+        "scale-beat": {
+          "0%, 100%": {
+            transform: "scale(1)",
+          },
+          "50%": {
+            transform: "scale(1.1)",
+          },
+        },
+      },
+
+      animation: {
+        "scale-beat": "scale-beat 1.5s ease-in-out infinite",
+      },
     },
     fontFamily: {
       Yeckanbakh: "yekanbakh",

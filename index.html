@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./src/images/blu-favicon-32x32.webp" />
     <link rel="stylesheet" href="./src/css/output.css" />
+
     <link rel="stylesheet" href="./src/fonts/icons/remixicon.css" />
+
     <title>blubank</title>
   </head>
   <body class="font-Yeckanbakh">
     <!-- start Header -->
     <header
       id="header"
-      class="h-16 desktop:h-auto overflow-hidden desktop:overflow-visible transition-all delay-1000"
+      class="relative h-16 desktop:h-auto overflow-hidden desktop:overflow-visible transition-all delay-1000"
     >
       <div class="container p-4">
         <div
@@ -457,6 +459,154 @@
       </div>
     </header>
 
+    <!--Start Main-->
+    <main>
+      <!--  hero-slider -->
+      <section
+        class="relative container mt-8 swiper mySwiper snap-x snap-mandatory"
+      >
+        <div
+          class="w-full p-[10px] flex gap-5 flex-shrink-0 overflow-hidden swiper-wrapper"
+        >
+          <!-- slide first-->
+          <div
+            class="w-full swiper-slide flex flex-col flex-shrink-0 md:flex-row mobile:gap-x-5 gap-y-5 desktop:gap-x-20 snap-start"
+          >
+            <figure
+              class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
+            >
+              <img
+                src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
+                alt=""
+                class="object-cover"
+              />
+            </figure>
+            <div class="py-6 desktop:self-center">
+              <h2
+                class="text-2xl mobile:mb-4 font-semibold text-text-subhead leading-6"
+              >
+                <a href="#">با یک دعوت میلیاردر شو</a>
+              </h2>
+              <p
+                class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
+              >
+                با بلو ممکن است فردا به عنوان یک میلیاردر از خواب بیدار شوید.
+                تنها کاری که باید بکنید این است که یکی از دوستان خود را به بلو
+                دعوت کنید. برای دعوت وارد اپلیکیشن شده و از قسمت دعوت دوستان در
+                فروشگاه، کد اختصاصی خود را برای دوستانتان بفرستید.
+              </p>
+              <div
+                class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
+              >
+                <figure class="border-l pl-4">
+                  <img src="./src/images/hero-slider/icon-prize.svg" alt="" />
+                </figure>
+                <p class="text-base leading-8 font-semibold">
+                  <span class="text-text-muted">قرعه کشی</span>
+                  <br />
+                  <span
+                    class="inline-block mx-2 text-success animate-scale-beat text-xl"
+                  >
+                    میلیاردر شو
+                  </span>
+                  <span class="text-success">به پایان رسید.</span>
+                </p>
+              </div>
+              <a
+                href="#"
+                class="text-brand-link flex items-center gap-2 font-bold"
+              >
+                <span> مشاهده برنده های میلیاردر شو</span>
+                <i class="ri-arrow-left-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- slide seconde -->
+          <div
+            class="swiper-slide flex flex-col md:flex-row flex-shrink-0 mobile:gap-x-5 gap-y-5 desktop:gap-x-20 w-full snap-start"
+          >
+            <figure
+              class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
+            >
+              <img
+                src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
+                alt=""
+                class="object-cover"
+              />
+            </figure>
+            <div class="py-6 desktop:self-center">
+              <h2
+                class="text-2xl mobile:mb-4 font-semibold text-text-subhead leading-6"
+              >
+                <a href="#">با یک دعوت میلیاردر شو</a>
+              </h2>
+              <p
+                class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
+              >
+                با بلو ممکن است فردا به عنوان یک میلیاردر از خواب بیدار شوید.
+                تنها کاری که باید بکنید این است که یکی از دوستان خود را به بلو
+                دعوت کنید. برای دعوت وارد اپلیکیشن شده و از قسمت دعوت دوستان در
+                فروشگاه، کد اختصاصی خود را برای دوستانتان بفرستید.
+              </p>
+              <div
+                class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
+              >
+                <figure class="border-l pl-4">
+                  <img src="./src/images/hero-slider/icon-prize.svg" alt="" />
+                </figure>
+                <p class="text-base leading-8 font-semibold">
+                  <span class="text-text-muted">قرعه کشی</span>
+                  <br />
+                  <span
+                    class="inline-block mx-2 text-success animate-scale-beat text-xl"
+                  >
+                    میلیاردر شو
+                  </span>
+                  <span class="text-success">به پایان رسید.</span>
+                </p>
+              </div>
+              <a
+                href="#"
+                class="text-brand-link flex items-center gap-2 font-bold"
+              >
+                <span> مشاهده برنده های میلیاردر شو</span>
+                <i class="ri-arrow-left-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--  Control-->
+          <div
+            class="w-[300px] mobile:w-[500px] md:w-[650px] desktop:w-[850px] lg:w-[400px] xl:w-[500px] flex justify-between items-center absolute left-5 -bottom-5 md:left-10 md:-bottom-14 lg:-bottom-0"
+          >
+            <div class="flex gap-5 swiper-pagination">
+              <div
+                class="pagination-dot w-2 h-2 bg-brand-light rounded-3xl transition-all duration-300"
+                data-index="0"
+              ></div>
+              <div
+                class="pagination-dot w-2 h-2 bg-brand-light rounded-3xl transition-all duration-300"
+                data-index="1"
+              ></div>
+            </div>
+            <div class="flex gap-3 text-brand">
+              <div
+                class="swiper-button-prev cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
+              >
+                <i class="ri-arrow-right-s-line text-[32px] block pt-1"></i>
+              </div>
+              <div
+                class="swiper-button-next cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
+              >
+                <i class="ri-arrow-left-s-line text-[32px] block pt-1"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- 
     <div class="fixed bottom-0">
       <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
       <i class="ri-battery-charge-line"></i> <i class="ri-refund-2-line"></i>
@@ -472,7 +622,7 @@
       <i class="ri-instagram-line"></i> <i class="ri-twitter-x-line"></i>
       <i class="ri-question-mark"></i> <i class="ri-add-large-line"></i>
       <i class="ri-arrow-right-long-line"></i>
-    </div>
+    </div> -->
     <script src="./src/js/app.js"></script>
   </body>
 </html>
