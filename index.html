@@ -12,600 +12,699 @@
   </head>
   <body class="font-Yeckanbakh">
     <!-- start Header -->
-    <header
-      id="header"
-      class="relative h-16 desktop:h-auto overflow-hidden desktop:overflow-visible transition-all delay-1000"
-    >
-      <div class="container p-4">
-        <div
-          class="flex flex-col desktop:flex-row desktop:items-center w-full h-full"
-        >
-          <div class="flex desktop:basis-[20%] items-center w-full h-full">
+    <header class="relative">
+      <div class="fixed w-full h-auto py-3 z-30">
+        <div class="container">
+          <div class="flex justify-between">
             <!-- منو همبرگری -->
-            <div class="w-full cursor-pointer h-full desktop:hidden">
-              <!--menu همبر گری-->
+            <div
+              id="hamburger-parent"
+              class="cursor-pointer h-full desktop:hidden"
+            >
               <div
                 id="menu__hamburger"
-                class="transition-all duration-300 ease-in-out w-12"
+                class="relative flex justify-center items-center transition-all duration-300 ease-in-out w-12 h-12"
               >
                 <div
+                  id="hamburger-divider"
                   class="relative block w-8 h-[3px] bg-gray-500 rounded-full transition-all duration-300 ease-in-out custom-divider"
                 ></div>
               </div>
             </div>
-
-            <!-- لو گو -->
-            <figure class="w-full flex md:justify-end desktop:justify-center">
+            <!-- logo -->
+            <figure class="flex justify-center items-center">
               <a href="">
                 <img src="./src/images/Logo.svg" class="" alt="logo-icon" />
               </a>
             </figure>
-            <!-- آیکون دانلود -->
-            <a href="#"
-              ><i class="ri-download-2-line text-[26px] md:hidden"></i
-            ></a>
-          </div>
-
-          <div
-            id="nav__mobile"
-            class="flex flex-col desktop:flex-row desktop:gap-6 desktop:justify-center desktop:items-center mt-2 transition-all delay-300"
-          >
-            <!-- نوبار موبایل-->
-            <nav class="">
-              <ul
-                class="flex flex-col-reverse mobile:text-center mobile:w-full desktop:gap-[10px] lg:gap-[12px] xl:gap-[16px] desktop:flex-row-reverse gap-1 text text-text-heading desktop:font-normal"
-              >
+            <!-- nav mobile -->
+            <div
+              class="menu__mobile desktop:hidden flex flex-col gap-y-5 -z-10 absolute w-full top-20 left-0 right-0 overflow-hidden overflow-y-scroll h-[300px] scale-y-0 transition-transform delay-200 origin-top"
+            >
+              <ul class="flex flex-col justify-center">
                 <li
-                  class="relative mt-3 mobile:mt-6 desktop:mt-0 hover-underline"
+                  class="w-full p-2 mt-3 border-b border-b-gray-500 overflow-hidden overflow-y-scroll"
                 >
-                  <a href="">بلونیوز</a>
-                </li>
-                <li
-                  class="relative mt-3 mobile:mt-6 desktop:mt-0 hover-underline"
-                >
-                  <a href="">بلاگ</a>
-                </li>
-                <li
-                  class="relative mt-3 mobile:mt-6 desktop:mt-0 hover-underline"
-                >
-                  <a href="">سوالات متداول</a>
-                </li>
-                <!--تماس با ما -->
-                <li
-                  id="contact-parent"
-                  class="relative cursor-pointer mt-5 mobile:mt-6 desktop:mt-0 desktop:max-w-20 hover-underline"
-                >
-                  <span>تماس با ما </span>
+                  <a href="#" class="flex justify-between">
+                    <p>خدمات</p>
+                    <div class="pluse relative ml-2 active"></div>
+                  </a>
                   <ul
-                    id="contact-child"
-                    class="flex flex-col pt-2 pr-3 max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    class="sub__menu scale-y-0 hidden flex-col mt-3 pr-6 w-full transition-transform duration-300 origin-top ease-in-out"
                   >
-                    <li
-                      class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                    >
+                    <li class="w-full border-t py-4">
                       <a
-                        href=""
-                        class="flex flex-row justify-between items-center"
+                        href="#"
+                        class="flex items-center gap-4 text-text-heading"
                       >
-                        <div class="flex justify-start items-center gap-x-4">
-                          <img
-                            src="./src/images/icon-about.svg"
-                            alt="درباره بلو"
-                            class="desktop:group-hover:text-brand"
-                          />
-                          <span class="pt-1"> درباره بلو </span>
-                        </div>
-                        <i
-                          class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                        ></i>
+                        <i class="ri-arrow-left-right-line"></i>
+                        <span class="">انتقال وجه</span>
                       </a>
                     </li>
-
-                    <li
-                      class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                    >
+                    <li class="w-full border-t py-4">
                       <a
-                        href=""
-                        class="flex flex-row justify-between items-center"
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
                       >
-                        <div class="flex justify-start items-center gap-x-4">
-                          <i
-                            class="text-[24px] font-normal ri-team-line text-text-heading desktop:group-hover:text-brand"
-                          ></i>
-                          <span class="pt-1"> همکاری با بلو </span>
-                        </div>
-                        <i
-                          class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                        ></i>
+                        <i class="ri-wallet-line"></i>
+                        <span>مدیریت مالی</span>
                       </a>
                     </li>
-
-                    <li
-                      class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                    >
+                    <li class="w-full border-t py-4">
                       <a
-                        href=""
-                        class="flex flex-row justify-between items-center"
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
                       >
-                        <div class="flex justify-start items-center gap-x-4">
-                          <i
-                            class="text-[24px] font-normal ri-briefcase-line text-text-heading desktop:group-hover:text-brand"
-                          ></i>
-                          <span class="pt-1"> موقعیت‌های شغلی </span>
-                        </div>
-                        <i
-                          class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                        ></i>
+                        <i class="ri-battery-charge-line"></i>
+                        <span>شارژ سیم‌کارت</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-refund-2-line"></i>
+                        <span>برگشت پول</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-receipt-line"></i>
+                        <span>پرداخت قبوض</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-bank-card-line"></i>
+                        <span>شارژ حساب</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-user-add-line"></i>
+                        <span>دعوت از دوستان</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-divide-line"></i>
+                        <span>دُنگ </span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-archive-line"></i>
+                        <span>باکس</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-folders-line"></i>
+                        <span>بیگ باکس</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-folder-shield-2-line"></i>
+                        <span>باکس وکالتی</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
+                      >
+                        <i class="ri-car-line"></i>
+                        <span>خدمات خودرویی</span>
                       </a>
                     </li>
                   </ul>
                 </li>
                 <li
-                  class="relative mt-5 mobile:mt-6 desktop:mt-0 hover-underline"
+                  class="w-full p-2 mt-3 border-b border-b-gray-500 overflow-hidden overflow-y-scroll"
                 >
-                  <a href="">بلوجونیور</a>
-                </li>
-                <li
-                  class="relative mt-3 mobile:mt-6 desktop:mt-0 hover-underline"
-                >
-                  <a href="">بازکردن حساب</a>
-                </li>
-
-                <!--وام-->
-                <li
-                  id="loan-parent"
-                  class="relative mt-3 cursor-pointer mobile:mt-6 desktop:mt-0 desktop:max-w-10 hover-underline"
-                >
-                  <span>وام</span>
+                  <a href="#" class="flex justify-between">
+                    <p>وام</p>
+                    <div class="pluse relative ml-2 active"></div>
+                  </a>
                   <ul
-                    id="loan-child"
-                    class="flex flex-col gap-1 pt-2 pr-3 max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    class="sub__menu scale-y-0 hidden flex-col mt-3 pr-6 w-full transition-transform duration-300 origin-top ease-in-out"
                   >
-                    <li
-                      class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                    >
+                    <li class="w-full border-t py-4">
                       <a
-                        href=""
-                        class="flex flex-row justify-between items-center"
+                        href="#"
+                        class="flex items-center gap-4 text-text-heading"
                       >
-                        <div class="flex justify-start items-center gap-x-4">
-                          <i
-                            class="text-[24px] font-normal ri-p2p-line text-text-heading desktop:group-hover:text-brand"
-                          ></i>
-                          <span class="pt-1"> وام </span>
-                        </div>
-                        <i
-                          class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                        ></i>
+                        <i class="ri-p2p-line"></i>
+                        <span class=""> وام</span>
                       </a>
                     </li>
-
-                    <li
-                      class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                    >
+                    <li class="w-full border-t py-4">
                       <a
-                        href=""
-                        class="flex flex-row justify-between items-center"
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
                       >
-                        <div class="flex justify-start items-center gap-x-4">
-                          <i
-                            class="text-[24px] font-normal ri-team-line text-text-heading desktop:group-hover:text-brand"
-                          ></i>
-                          <span class="pt-1"> وام بلو </span>
-                        </div>
-                        <i
-                          class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                        ></i>
+                        <i class="ri-team-line"></i>
+                        <span> وام بلو</span>
                       </a>
                     </li>
                   </ul>
                 </li>
-
-                <!-- خدمات-->
+                <li class="w-full p-2 mt-3 border-b border-b-gray-500">
+                  <a href="#">بازکردن حساب</a>
+                </li>
+                <li class="w-full p-2 mt-3 border-b border-b-gray-500">
+                  <a href="#">بلوجونیور</a>
+                </li>
                 <li
-                  id="parent-li"
-                  class="relative mt-3 cursor-pointer mobile:mt-6 desktop:mt-0 desktop:max-w-12 desktop:group hover-underline"
+                  class="w-full p-2 mt-3 border-b border-b-gray-500 overflow-hidden overflow-y-scroll"
                 >
-                  <span>خدمات</span>
+                  <a href="#" class="flex justify-between">
+                    <p>تماس با ما</p>
+                    <div class="pluse relative ml-2 active"></div>
+                  </a>
                   <ul
-                    id="child-ul"
-                    class="flex flex-col mobile:flex-row mobile:gap-10 mobile:flex-wrap mobile:flex-grow pt-2 pr-3 max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+                    class="sub__menu scale-y-0 hidden flex-col mt-3 pr-6 w-full transition-transform duration-300 origin-top ease-in-out"
                   >
-                    <div class="min-w-[200px] mobile:flex-grow mobile:mb-10">
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
+                    <li class="w-full border-t py-4">
+                      <a
+                        href="#"
+                        class="flex items-center gap-4 text-text-heading"
                       >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-arrow-left-right-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> انتقال وجه </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
+                        <img
+                          src="./src/images/icon-about.svg"
+                          alt="درباره بلو"
+                          class="desktop:group-hover:text-brand"
+                        />
+                        <span class="">درباه بلو</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
                       >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-wallet-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> مدیریت مالی </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
+                        <i class="ri-team-line"></i>
+                        <span>همکاری با بلو</span>
+                      </a>
+                    </li>
+                    <li class="w-full border-t py-4">
+                      <a
+                        class="flex items-center gap-4 text-text-heading"
+                        href="#"
                       >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-battery-charge-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> شارژ سیم کارت </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-refund-2-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> برگشت پول </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-                    </div>
-                    <div class="min-w-[200px] mobile:flex-grow mobile:mb-10">
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] text-text-heading font-normal ri-receipt-line desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> پرداخت قبوض </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] text-text-heading font-normal ri-bank-card-line desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> شارژ حساب </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] text-text-heading font-normal ri-user-add-line desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> دعوت از دوستان </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] text-text-heading font-normal ri-divide-line desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> دُنگ </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-                    </div>
-                    <div class="min-w-[200px] mobile:flex-grow mobile:mb-10">
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-archive-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> باکس </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-folders-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> بیگ باکس </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-folder-shield-2-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> باکس وکالتی </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-
-                      <li
-                        class="mt-3 desktop:mt-0 desktop:p-3 desktop:hover:bg-bg-base desktop:rounded-[12px] group"
-                      >
-                        <a
-                          href=""
-                          class="flex flex-row justify-between items-center"
-                        >
-                          <div class="flex justify-start items-center gap-x-4">
-                            <i
-                              class="text-[24px] font-normal ri-car-line text-text-heading desktop:group-hover:text-brand"
-                            ></i>
-                            <span class="pt-1"> خدمات خودرویی </span>
-                          </div>
-                          <i
-                            class="ri-arrow-left-line text-lg text-white desktop:group-hover:text-brand"
-                          ></i>
-                        </a>
-                      </li>
-                    </div>
+                        <i class="ri-briefcase-line"></i>
+                        <span> موقعیت های شغلی</span>
+                      </a>
+                    </li>
                   </ul>
                 </li>
+                <li class="w-full p-2 mt-3 border-b border-b-gray-500">
+                  <a href="#">سوالات متداول</a>
+                </li>
+                <li class="w-full p-2 mt-3 border-b border-b-gray-500">
+                  <a href="#">بلاگ</a>
+                </li>
+                <li class="w-full p-2 mt-3 border-b border-b-gray-500">
+                  <a href="#">بلونیوز</a>
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="self-center mt-[40px] desktop:mt-0 desktop:hidden py-3 px-5 border-[2px] border-brand rounded-md text-brand"
+                >دانلود و نصب بلو
+              </a>
+            </div>
+            <!-- nav desktop -->
+            <nav class="hidden desktop:block">
+              <ul class="flex justify-center items-center w-full h-full gap-5">
+                <li
+                  class="menu__before group relative flex justify-center items-center gap-1 h-full cursor-pointer"
+                >
+                  <a
+                    href=""
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    >خدمات
+                  </a>
 
-                <!-- اتمام li-->
+                  <div
+                    class="absolute flex justify-between items-center gap-5 w-[800px] h-auto -bottom-[236px] lg:-left-[600px] desktop:-left-[700px] rounded-2xl pt-9 scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                  >
+                    <ul
+                      class="w-full my-4 flex flex-col items-center justify-center"
+                    >
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-arrow-left-right-line text-xl"
+                            ></i>
+                            <span>انتقال وجه </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-wallet-line"
+                            ></i>
+                            <span> مدیریت مالی </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-battery-charge-line"
+                            ></i>
+                            <span> شارژ سیم‌کارت </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-refund-2-line"
+                            ></i>
+                            <span> برگشت پول </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul
+                      class="w-full my-4 flex flex-col items-center justify-center"
+                    >
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-receipt-line"
+                            ></i>
+                            <span> پرداخت قبوض </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-bank-card-line"
+                            ></i>
+                            <span> شارژ حساب </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-user-add-line"
+                            ></i>
+                            <span> دعوت از دوستان </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-divide-line"
+                            ></i>
+                            <span> دُنگ </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                    <ul
+                      class="w-full my-4 flex flex-col items-center justify-center"
+                    >
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-archive-line"
+                            ></i>
+                            <span> باکس </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-folders-line"
+                            ></i>
+                            <span> بیگ باکس </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-folder-shield-2-line"
+                            ></i>
+                            <span>باکس وکالتی </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-car-line"
+                            ></i>
+                            <span> خدمات خودرویی </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <i
+                    class="text-lg group-hover:text-brand ri-arrow-down-s-line transition-colors delay-150 ease-in-out"
+                  ></i>
+                </li>
+                <li
+                  class="relative menu__before group flex justify-center items-center gap-1 h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                  >
+                    وام
+                  </a>
+                  <div
+                    class="absolute flex justify-between items-center p-5 gap-5 w-[300px] h-auto -bottom-[150px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                  >
+                    <ul
+                      class="w-full my-4 flex flex-col items-center justify-center"
+                    >
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-p2p-line text-xl"
+                            ></i>
+                            <span> وام </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-team-line"
+                            ></i>
+                            <span> وام بلو </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <i
+                    class="text-lg group-hover:text-brand ri-arrow-down-s-line"
+                  ></i>
+                </li>
+                <li
+                  class="relative flex justify-center items-center menu__before group h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >بازکردن حساب</a
+                  >
+                </li>
+                <li
+                  class="relative menu__before flex justify-center items-center group h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >بلوجونیور</a
+                  >
+                </li>
+                <li
+                  class="menu__before group relative flex justify-center items-center gap-1 h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >تماس با ما
+                  </a>
+                  <div
+                    class="absolute flex justify-between items-center p-5 gap-5 w-[300px] h-auto -bottom-[200px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                  >
+                    <ul
+                      class="w-full my-4 flex flex-col items-center justify-center"
+                    >
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <img
+                              src="./src/images/icon-about.svg"
+                              alt="درباره بلو"
+                              class="desktop:group-hover:text-brand"
+                            />
+                            <span> درباره بلو </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-team-line"
+                            ></i>
+                            <span> همکاری با بلو </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                      <li
+                        class="w-full p-2 mt-2 hover:bg-bg-base rounded-xl group/item"
+                      >
+                        <a
+                          href=""
+                          class="flex justify-between items-center text-text-heading text-xl"
+                        >
+                          <div class="flex justify-center items-center gap-2">
+                            <i
+                              class="group-hover/item:text-brand ri-briefcase-line"
+                            ></i>
+                            <span> موقعیت های شغلی </span>
+                          </div>
+                          <i
+                            class="group-hover/item:text-brand text-transparent ri-arrow-left-line"
+                          ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <i
+                    class="text-lg group-hover:text-brand ri-arrow-down-s-line"
+                  ></i>
+                </li>
+                <li
+                  class="relative menu__before group flex justify-center items-center h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >سوالات متداول</a
+                  >
+                </li>
+                <li
+                  class="relative menu__before group flex justify-center items-center h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >بلاگ
+                  </a>
+                </li>
+                <li
+                  class="relative menu__before group flex justify-center items-center h-full cursor-pointer"
+                >
+                  <a
+                    class="group-hover:text-brand transition-colors delay-150 ease-in-out"
+                    href=""
+                    >بلونیوز</a
+                  >
+                </li>
               </ul>
             </nav>
-            <!-- دکمه دانلود -->
+            <!-- link -->
             <a
               href="#"
-              class="self-center mt-[40px] desktop:mt-0 xl:mr-[50px] block py-3 px-5 border-[2px] border-brand rounded-md text-brand"
+              class="hidden self-center mt-[40px] desktop:mt-0 desktop:block py-3 px-5 border-[2px] border-brand rounded-md text-brand"
               >دانلود و نصب بلو
             </a>
+
+            <!-- icon downlaod-->
+            <a href="#" class="flex items-center justify-center md:hidden"
+              ><i class="ri-download-2-line text-[26px]"></i
+            ></a>
           </div>
         </div>
       </div>
     </header>
 
     <!--Start Main-->
-    <main>
-      <!--  hero-slider -->
-      <section
-        class="relative container mt-8 swiper mySwiper snap-x snap-mandatory"
-      >
-        <div
-          class="w-full p-[10px] flex gap-5 flex-shrink-0 overflow-hidden swiper-wrapper"
-        >
-          <!-- slide first-->
-          <div
-            class="w-full swiper-slide flex flex-col flex-shrink-0 md:flex-row mobile:gap-x-5 gap-y-5 desktop:gap-x-20 snap-start"
-          >
-            <figure
-              class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
-            >
-              <img
-                src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
-                alt=""
-                class="object-cover"
-              />
-            </figure>
-            <div class="py-6 desktop:self-center">
-              <h2
-                class="text-2xl mobile:mb-4 font-semibold text-text-subhead leading-6"
-              >
-                <a href="#">با یک دعوت میلیاردر شو</a>
-              </h2>
-              <p
-                class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
-              >
-                با بلو ممکن است فردا به عنوان یک میلیاردر از خواب بیدار شوید.
-                تنها کاری که باید بکنید این است که یکی از دوستان خود را به بلو
-                دعوت کنید. برای دعوت وارد اپلیکیشن شده و از قسمت دعوت دوستان در
-                فروشگاه، کد اختصاصی خود را برای دوستانتان بفرستید.
-              </p>
-              <div
-                class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
-              >
-                <figure class="border-l pl-4">
-                  <img src="./src/images/hero-slider/icon-prize.svg" alt="" />
-                </figure>
-                <p class="text-base leading-8 font-semibold">
-                  <span class="text-text-muted">قرعه کشی</span>
-                  <br />
-                  <span
-                    class="inline-block mx-2 text-success animate-scale-beat text-xl"
-                  >
-                    میلیاردر شو
-                  </span>
-                  <span class="text-success">به پایان رسید.</span>
-                </p>
-              </div>
-              <a
-                href="#"
-                class="text-brand-link flex items-center gap-2 font-bold"
-              >
-                <span> مشاهده برنده های میلیاردر شو</span>
-                <i class="ri-arrow-left-line"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- slide seconde -->
-          <div
-            class="swiper-slide flex flex-col md:flex-row flex-shrink-0 mobile:gap-x-5 gap-y-5 desktop:gap-x-20 w-full snap-start"
-          >
-            <figure
-              class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
-            >
-              <img
-                src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
-                alt=""
-                class="object-cover"
-              />
-            </figure>
-            <div class="py-6 desktop:self-center">
-              <h2
-                class="text-2xl mobile:mb-4 font-semibold text-text-subhead leading-6"
-              >
-                <a href="#">با یک دعوت میلیاردر شو</a>
-              </h2>
-              <p
-                class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
-              >
-                با بلو ممکن است فردا به عنوان یک میلیاردر از خواب بیدار شوید.
-                تنها کاری که باید بکنید این است که یکی از دوستان خود را به بلو
-                دعوت کنید. برای دعوت وارد اپلیکیشن شده و از قسمت دعوت دوستان در
-                فروشگاه، کد اختصاصی خود را برای دوستانتان بفرستید.
-              </p>
-              <div
-                class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
-              >
-                <figure class="border-l pl-4">
-                  <img src="./src/images/hero-slider/icon-prize.svg" alt="" />
-                </figure>
-                <p class="text-base leading-8 font-semibold">
-                  <span class="text-text-muted">قرعه کشی</span>
-                  <br />
-                  <span
-                    class="inline-block mx-2 text-success animate-scale-beat text-xl"
-                  >
-                    میلیاردر شو
-                  </span>
-                  <span class="text-success">به پایان رسید.</span>
-                </p>
-              </div>
-              <a
-                href="#"
-                class="text-brand-link flex items-center gap-2 font-bold"
-              >
-                <span> مشاهده برنده های میلیاردر شو</span>
-                <i class="ri-arrow-left-line"></i>
-              </a>
-            </div>
-          </div>
-
-          <!--  Control-->
-          <div
-            class="w-[300px] mobile:w-[500px] md:w-[650px] desktop:w-[850px] lg:w-[400px] xl:w-[500px] flex justify-between items-center absolute left-5 -bottom-5 md:left-10 md:-bottom-14 lg:-bottom-0"
-          >
-            <div class="flex gap-5 swiper-pagination">
-              <div
-                class="pagination-dot w-2 h-2 bg-brand-light rounded-3xl transition-all duration-300"
-                data-index="0"
-              ></div>
-              <div
-                class="pagination-dot w-2 h-2 bg-brand-light rounded-3xl transition-all duration-300"
-                data-index="1"
-              ></div>
-            </div>
-            <div class="flex gap-3 text-brand">
-              <div
-                class="swiper-button-prev cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
-              >
-                <i class="ri-arrow-right-s-line text-[32px] block pt-1"></i>
-              </div>
-              <div
-                class="swiper-button-next cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
-              >
-                <i class="ri-arrow-left-s-line text-[32px] block pt-1"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    <!--  hero-slider -->
+    <main></main>
     <!-- 
     <div class="fixed bottom-0">
       <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
