@@ -12,41 +12,75 @@
 }
 
 @layer components {
+  /* Hamburger Icon */
   .custom-divider::before {
     @apply absolute content-[''] right-0 top-0 translate-y-2 w-8 h-[3px] bg-gray-500 transition-all duration-300 ease-in-out;
   }
 
+  /* Hamburger Icon */
   .custom-divider::after {
     @apply absolute content-[''] right-0 top-0 -translate-y-2 w-8 h-[3px] bg-gray-500 transition-all duration-300 ease-in-out;
   }
 
+  /* Toggle State */
   .custom-divider.custom-divider--toggle {
     @apply bg-transparent;
   }
 
+  /* Toggle Line */
   .custom-divider.custom-divider--toggle::before {
     @apply rotate-45 -translate-y-0 translate-x-[3px];
   }
 
+  /* Toggle Line */
   .custom-divider.custom-divider--toggle::after {
     @apply -rotate-45 -translate-y-0 translate-x-[3px];
   }
 
+  /* Menu Underline */
   .menu__before::after {
-    @apply absolute content-[""] bottom-0 left-0 right-0  translate-y-[2px] h-[3px] rounded-3xl scale-x-0  transition-all duration-300 ease-out origin-center;
+    @apply absolute content-[""] bottom-0 left-0 right-0  translate-y-[2px] h-[3px] rounded-3xl scale-x-0  transition-all duration-300 ease-out origin-center;
   }
 
+  /* Menu Hover */
   .menu__before:hover::after {
     @apply bg-brand scale-x-100;
   }
 
+  /* Plus Icon */
   .pluse::after {
     @apply absolute top-1 left-0 w-4 h-0.5 content-[''] transition-all duration-300 ease-in-out -translate-x-1/2 -translate-y-1/2 bg-gray-900;
   }
+
+  /* Plus Icon */
   .pluse::before {
     @apply absolute top-1 left-0 w-4 h-0.5 content-[''] transition-all duration-300 ease-in-out -translate-x-1/2 -translate-y-1/2 bg-gray-900;
   }
+
+  /* Active Rotate */
   .pluse::before.active {
     @apply rotate-90;
+  }
+
+  /* section hero*/
+
+  /* Swiper Container */
+  swiper-container {
+    @apply w-full h-full mx-auto;
+  }
+
+  /* Swiper Slide */
+  swiper-slide {
+    @apply text-lg;
+  }
+
+  /* Slide Image */
+  swiper-slide img {
+    @apply block w-full h-full object-cover;
+  }
+
+  /* Slide Content */
+  .swiper-slide {
+    @apply text-lg;
   }
 }

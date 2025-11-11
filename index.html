@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./src/images/blu-favicon-32x32.webp" />
     <link rel="stylesheet" href="./src/css/output.css" />
+    <link rel="stylesheet" href="./src/css/plugins/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="./src/fonts/icons/remixicon.css" />
 
@@ -13,10 +14,10 @@
   <body class="font-Yeckanbakh">
     <!-- start Header -->
     <header class="relative">
-      <div class="fixed w-full h-auto py-3 z-30">
+      <div class="fixed w-full h-auto top-0 py-3 z-30 bg-white shadow-md">
         <div class="container">
           <div class="flex justify-between">
-            <!-- منو همبرگری -->
+            <!--  menu hamburgery -->
             <div
               id="hamburger-parent"
               class="cursor-pointer h-full desktop:hidden"
@@ -39,7 +40,7 @@
             </figure>
             <!-- nav mobile -->
             <div
-              class="menu__mobile desktop:hidden flex flex-col gap-y-5 -z-10 absolute w-full top-20 left-0 right-0 overflow-hidden overflow-y-scroll h-[300px] scale-y-0 transition-transform delay-200 origin-top"
+              class="menu__mobile desktop:hidden bg-white flex flex-col gap-y-5 -z-10 absolute w-full top-[70px] left-0 right-0 overflow-hidden overflow-y-scroll h-[400px] scale-y-0 transition-transform delay-200 origin-top pb-[60px]"
             >
               <ul class="flex flex-col justify-center">
                 <li
@@ -703,8 +704,153 @@
     </header>
 
     <!--Start Main-->
-    <!--  hero-slider -->
-    <main></main>
+    <main class="mt-[150px]">
+      <!--  hero-slider -->
+      <section class="relative container mt-8">
+        <!-- Swiper -->
+        <div class="swiper mySwiper w-full mx-auto">
+          <div class="swiper-wrapper">
+            <!-- slide first-->
+            <div class="swiper-slide w-full h-full">
+              <div
+                class="w-full flex flex-col md:flex-row mobile:gap-x-5 gap-y-5 desktop:gap-x-20 snap-start"
+              >
+                <figure
+                  class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
+                >
+                  <img
+                    src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
+                    alt=""
+                    class="object-cover"
+                  />
+                </figure>
+                <div class="py-6 desktop:self-center">
+                  <h2
+                    class="text-2xl mobile:mb-4 font-semibold text-text-subhead leading-6"
+                  >
+                    <a href="#">با یک دعوت میلیاردر شو</a>
+                  </h2>
+                  <p
+                    class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
+                  >
+                    با بلو ممکن است فردا به عنوان یک میلیاردر از خواب بیدار
+                    شوید. تنها کاری که باید بکنید این است که یکی از دوستان خود
+                    را به بلو دعوت کنید. برای دعوت وارد اپلیکیشن شده و از قسمت
+                    دعوت دوستان در فروشگاه، کد اختصاصی خود را برای دوستانتان
+                    بفرستید.
+                  </p>
+                  <div
+                    class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
+                  >
+                    <figure class="border-l pl-4">
+                      <img
+                        src="./src/images/hero-slider/icon-prize.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <p class="text-base leading-8 font-semibold">
+                      <span class="text-text-muted">قرعه کشی</span>
+                      <br />
+                      <span
+                        class="inline-block mx-2 text-success animate-scale-beat text-xl"
+                      >
+                        میلیاردر شو
+                      </span>
+                      <span class="text-success">به پایان رسید.</span>
+                    </p>
+                  </div>
+                  <a
+                    href="#"
+                    class="text-brand-link flex items-center gap-2 font-bold"
+                  >
+                    <span> مشاهده برنده های میلیاردر شو</span>
+                    <i class="ri-arrow-left-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- slide 2-->
+            <div class="swiper-slide w-full h-full">
+              <div
+                class="w-full flex flex-col md:flex-row mobile:gap-x-5 gap-y-5 desktop:gap-x-20 snap-start"
+              >
+                <figure
+                  class="desktop:max-w-[500px] max-w-[400px] rounded-3xl overflow-hidden self-center"
+                >
+                  <img
+                    src="./src/images/hero-slider/blu-slider-miliarder-show-desktop-green (1).webp"
+                    alt=""
+                    class="object-cover"
+                  />
+                </figure>
+                <div class="py-6 desktop:self-center">
+                  <h2 class="text-4xl mobile:mb-4 font-bold text-text-subhead">
+                    <span class="text-blue-600"> بلو،</span>
+                    بانک<br class="hidden md:block" />
+                    ولی دوست داشتنی
+                  </h2>
+                  <p
+                    class="mt-2 mb-4 text-sm mobile:text-base text-text-subhead font-normal line-clamp-2"
+                  >
+                    بلو، پلتفرمی تمام دیجیتال است که همه‌ی دیجیتال است که همه‌ی
+                    عملیات بانکداری با اپلیکیشن بلو و کاملا آنلاین انجام می‌شود
+                  </p>
+                  <div
+                    class="flex my-6 gap-5 desktop:gap-8 border rounded-xl p-4 items-center"
+                  >
+                    <figure class="border-l pl-4">
+                      <img
+                        src="./src/images/hero-slider/icon-prize.svg"
+                        alt=""
+                      />
+                    </figure>
+                    <p class="text-base leading-8 font-semibold">
+                      <span class="text-text-muted">قرعه کشی</span>
+                      <br />
+                      <span
+                        class="inline-block mx-2 text-success animate-scale-beat text-xl"
+                      >
+                        میلیاردر شو
+                      </span>
+                      <span class="text-success">به پایان رسید.</span>
+                    </p>
+                  </div>
+                  <a
+                    href="#"
+                    class="text-brand-link flex items-center gap-2 font-bold"
+                  >
+                    <span> مشاهده برنده های میلیاردر شو</span>
+                    <i class="ri-arrow-left-line"></i>
+                  </a>
+                  <div class="h-[20px]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--  Control-->
+          <div
+            class="z-30 w-[300px] mobile:w-[500px] md:w-[650px] desktop:w-[850px] lg:w-[400px] xl:w-[500px] flex justify-between items-center absolute left-5 -bottom-5 md:left-10 lg:-bottom-0"
+          >
+            <div class="swiper-pagination"></div>
+            <div class="flex gap-3 text-brand z-30">
+              <div
+                class="swiper-button-prev cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
+              >
+                <i class="ri-arrow-right-s-line text-[32px] block pt-1"></i>
+              </div>
+              <div
+                class="swiper-button-next cursor-pointer w-[56px] h-[56px] bg-bg-base rounded-lg text-center"
+              >
+                <i class="ri-arrow-left-s-line text-[32px] block pt-1"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="h-[2000px]"></div>
     <!-- 
     <div class="fixed bottom-0">
       <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
@@ -723,5 +869,25 @@
       <i class="ri-arrow-right-long-line"></i>
     </div> -->
     <script src="./src/js/app.js"></script>
+    <script src="/src/js/plugins/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 3000, // اسلاید هر 3000 میلی‌ثانیه (3 ثانیه) عوض می‌شود
+          disableOnInteraction: false, // حتی اگر کاربر با اسلایدر تعامل داشت، Autoplay متوقف نشود
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
