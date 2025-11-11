@@ -899,11 +899,221 @@
           </a>
         </div>
       </section>
+
+      <!-- section blu cart-->
+      <section class="container">
+        <div class="flex flex-col justify-center gap-4">
+          <div class="w-full h-full text-center">
+            <h2 class="text-[32px] font-bold text-text-heading mb-2">
+              بلو فقط آبی نیست
+            </h2>
+            <h3 class="text-text-muted text-base">کارت های بلو</h3>
+          </div>
+          <div class="relative w-full h-auto flex items-center">
+            <!--video -->
+            <div class="w-full h-full py-8 bg-[#e5ecf6] rounded-2xl">
+              <div class="max-w-[500px]">
+                <video
+                  id="change--video"
+                  src="./src/Video/card-blue-video-cbg.webm"
+                  playsinline
+                  loop
+                  muted
+                  autoplay
+                ></video>
+              </div>
+              <!--color-->
+              <div
+                class="absolute md:right-0 top-0 mobi md:top-10 desktop:top-12 flex flex-col gap-2 desktop:gap-5 p-2"
+              >
+                <div
+                  class="color--button relative w-[40px] h-[40px] bg-brand-link rounded-full p-2"
+                  data-color="Blue"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-theme-danger rounded-full"
+                  data-color="Red"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-success rounded-full"
+                  data-color="Green"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-theme-violet rounded-full"
+                  data-color="Purple"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-theme-warning rounded-full"
+                  data-color="Yellow"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-theme-rose rounded-full"
+                  data-color="Pink"
+                ></div>
+
+                <div
+                  class="color--button w-[40px] h-[40px] bg-theme-dark rounded-full"
+                  data-color="Black"
+                ></div>
+              </div>
+            </div>
+            <!--image-->
+            <div class="w-full h-full flex-col gap-5 hidden md:flex">
+              <figure
+                class="bg-[#eef4fc] rounded-2xl max-w-[400px] self-center"
+              >
+                <img
+                  id="image__back"
+                  src="./src/images/Blue Card/Blue/card-blue-render-back.webp"
+                  alt=""
+                />
+              </figure>
+              <figure
+                class="bg-[#eef4fc] rounded-2xl max-w-[400px] self-center"
+              >
+                <img
+                  id="image__front"
+                  class="bg-[#eef4fc]"
+                  src="./src/images/Blue Card/Blue/card-blue-render-front.webp"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section Smart-Saving-->
+      <section class="container mt-20">
+        <div class="flex flex-col gap-8">
+          <div class="w-full">
+            <h2
+              class="md:text-[32px] text-[24px] font-bold text-text-heading mb-9 text-center"
+            >
+              با بلو پس انداز کنید.
+            </h2>
+            <div class="flex flex-col md:flex-row gap-x-5 gap-y-4">
+              <div
+                class="p-12 flex flex-col gap-2 group bg-bg-save-teal rounded-lg"
+              >
+                <h2
+                  class="md:text-[32px] text-[24px] font-bold text-text-heading mb-2"
+                >
+                  سود تو بیگ باکسه
+                </h2>
+                <p
+                  class="md:text-[18px] text-[16px] text-text-subhead leading-8 max-w-[644px]"
+                >
+                  با ساخت حساب بلند مدت در اپلیکیشن بلو برای سرمایه‌گذاری در ۳
+                  ماه ۱۲ درصد، ۶ ماه ۱۷ درصد و برای ۱۲ ماه تا ۲۰/۵ درصد سود
+                  دریافت کنید
+                </p>
+                <figure
+                  class="group-hover:scale-125 self-center md:self-end transition-transform delay-200"
+                >
+                  <img
+                    class="max-w-[240px]"
+                    src="./src/images/blu-img-cashback.webp"
+                    alt=""
+                  />
+                </figure>
+                <a
+                  href=""
+                  class="p-3 flex items-center max-w-[200px] self-center md:self-end gap-5 rounded-[25px] group-hover:bg-brand hover:max-w-[200px] transition-colors delay-150 ease-in-out"
+                >
+                  <span
+                    class="hidden group-hover:inline-block scale-x-0 group-hover:scale-x-100 group-hover:text-white transition-all delay-200"
+                    >مشاهده بیشتر</span
+                  >
+                  <div
+                    class="flex justify-center rounded-full items-center w-[50px] h-[50px] bg-slate-50 transition-all delay-300 ease-in-out"
+                  >
+                    <i
+                      class="text-2xl text-brand ri-arrow-left-up-long-line"
+                    ></i>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="p-12 flex flex-col gap-2 group bg-bg-save-rose rounded-lg"
+              >
+                <h2
+                  class="md:text-[32px] text-[24px] font-bold text-text-heading mb-2"
+                >
+                  لذت برگشت پول
+                </h2>
+                <p
+                  class="md:text-[18px] text-[16px] text-text-subhead leading-8 max-w-[644px]"
+                >
+                  ببا خرید روزانه از فروشگاه‌های طرف قرارداد یا درصدی از خرید را
+                  تخفیف می‌گیرید یا درصدی از مبلغ به حساب شما برمی‌گردد.
+                </p>
+                <figure
+                  class="group-hover:scale-125 self-center md:self-end transition-transform delay-200"
+                >
+                  <img
+                    class="max-w-[240px]"
+                    src="./src/images/mountain.webp"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group rounded-lg bg-[#f2f1f9] flex justify-center flex-col md:flex-row p-12"
+          >
+            <div>
+              <div class="flex flex-col gap-5 w-full">
+                <h2
+                  class="md:text-[32px] text-[24px] font-bold text-text-heading mb-2"
+                >
+                  وام، ولی دست یافتنی
+                </h2>
+                <p
+                  class="md:text-[18px] text-[16px] text-text-subhead leading-8"
+                >
+                  بدون ضامن و وثیقه در کمتر از ۷ دقیقه وام سریع و آسان بلو را
+                  دریافت کنید. با میانگین حساب خود در ۳ ماه متوالی می‌توانید از
+                  ۳ تا ۴۰ میلیون وام بگیرید.
+                </p>
+              </div>
+              <a
+                href=""
+                class="p-3 mt-6 flex items-center max-w-[200px] gap-5 rounded-[25px] group-hover:bg-brand transition-all delay-300 ease-in-out self-center md:self-end"
+              >
+                <span
+                  class="hidden group-hover:inline-block scale-x-0 group-hover:scale-x-100 group-hover:text-white transition-all delay-200"
+                  >مشاهده بیشتر</span
+                >
+                <div
+                  class="flex justify-center rounded-full items-center w-[50px] h-[50px] bg-slate-50 transition-all delay-300 ease-in-out"
+                >
+                  <i class="text-2xl text-brand ri-arrow-left-up-long-line"></i>
+                </div>
+              </a>
+            </div>
+            <figure
+              class="group-hover:scale-125 self-center md:self-end transition-transform delay-200 mt-9 md:mt-0"
+            >
+              <img
+                src="./src/images/blu-img-bag.webp"
+                alt=""
+                class="max-w-[400px]"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <div class="h-[2000px]"></div>
-
-    <!-- <div class="fixed bottom-0">
+    <!-- 
+    <div class="fixed bottom-0">
       <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
       <i class="ri-battery-charge-line"></i> <i class="ri-refund-2-line"></i>
       <i class="ri-receipt-line"></i> <i class="ri-bank-card-line"></i>

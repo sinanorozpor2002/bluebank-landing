@@ -83,4 +83,9 @@
   .swiper-slide {
     @apply text-lg;
   }
+
+  .border--item::after {
+    @apply content-[''] absolute w-[50px] h-[50px] border-[2px] border-brand rounded-full 
+           top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2; /* 👈 کلاس‌های جدید برای مرکزیت */
+  }
 }
