@@ -108,4 +108,103 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-// اسلایدر
+
+// =======================================================
+// (Assets Data)
+// =======================================================
+const CARD_ASSETS = [
+  {
+    id: 1,
+    color: "Black",
+    video: "./src/Video/card-black-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Black/card-black-render-front.webp",
+    imageBack: "./src/images/Blue Card/Black/card-black-render-back.webp",
+  },
+  {
+    id: 2,
+    color: "Blue",
+    video: "./src/Video/card-blue-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Blue/card-blue-render-front.webp",
+    imageBack: "./src/images/Blue Card/Blue/card-blue-render-back.webp",
+  },
+  {
+    id: 3,
+    color: "Green",
+    video: "./src/Video/card-green-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Green/card-green-render-front.webp",
+    imageBack: "./src/images/Blue Card/Green/card-green-render-back.webp",
+  },
+  {
+    id: 4,
+    color: "Pink",
+    video: "./src/Video/card-rosegold-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Pink/card-rosegold-render-front.webp",
+    imageBack: "./src/images/Blue Card/Pink/card-rosegold-render-back.webp",
+  },
+  {
+    id: 5,
+    color: "Yellow",
+    video: "./src/Video/card-yellow-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Yellow/card-yellow-render-front.webp",
+    imageBack: "./src/images/Blue Card/Yellow/card-yellow-render-back.webp",
+  },
+  {
+    id: 6,
+    color: "Red",
+    video: "./src/Video/card-red-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Red/card-red-render-front.webp",
+    imageBack: "./src/images/Blue Card/Red/card-red-render-back.webp",
+  },
+  {
+    id: 7,
+    color: "Purple",
+    video: "./src/Video/card-purple-video-cbg.webm",
+    imageFront: "./src/images/Blue Card/Purple/card-purple-render-front.webp",
+    imageBack: "./src/images/Blue Card/Purple/card-purple-render-back.webp",
+  },
+];
+
+const videoElement = document.getElementById("change--video");
+
+const imageBack = document.getElementById("image__back");
+const imageFront = document.getElementById("image__front");
+
+const colorButtons = document.querySelectorAll(".color--button");
+
+function updateCardAssets(card) {
+  videoElement.src = card.video;
+  videoElement.load();
+  videoElement.play();
+
+  imageBack.src = card.imageBack;
+  imageFront.src = card.imageFront;
+}
+
+const handleColorClick = (event) => {
+  const clickedButton = event.currentTarget;
+
+  colorButtons.forEach((btn) => {
+    btn.classList.remove("border--item");
+
+    btn.classList.remove("relative");
+  });
+
+  clickedButton.classList.add("border--item");
+
+  clickedButton.classList.add("relative");
+
+  const selectedColor = clickedButton.dataset.color;
+  const selectedCard = CARD_ASSETS.find(
+    (card) => card.color.toLowerCase() === selectedColor.toLowerCase()
+  );
+
+  if (selectedCard) {
+    updateCardAssets(selectedCard);
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  colorButtons.forEach((button) => {
+    button.addEventListener("click", handleColorClick);
+  });
+});
