@@ -208,3 +208,37 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", handleColorClick);
   });
 });
+
+// بوردر ردیوس
+document.addEventListener("DOMContentLoaded", () => {
+  // انتخاب تمام دایوهایی که باید انیمیشن بگیرند
+  const iconContainers = document.querySelectorAll(".icon-item");
+
+  // اگر عنصری پیدا نشد، متوقف شو
+  if (iconContainers.length === 0) return;
+
+  const ANIMATION_CLASS = "rotating-border-external";
+  const INTERVAL_SECONDS = 3000; // ۳ ثانیه = ۳۰۰۰ میلی ثانیه
+
+  // index فعلی دایوی که انیمیشن روی آن است
+  let currentIndex = 2; // شروع از دایو سوم (index 2)
+
+  function rotateAnimation() {
+    // ۱. حذف کلاس از عنصر فعلی
+    const currentIcon = iconContainers[currentIndex];
+    currentIcon.classList.remove(ANIMATION_CLASS);
+    currentIcon.classList.remove("relative"); // کلاس relative هم برای موقعیت دهی ::after لازم است
+
+    // ۲. محاسبه index بعدی (چرخشی)
+    // اگر به آخر (index 2) رسیدیم، به 0 برگرد، در غیر این صورت یکی اضافه کن
+    currentIndex = (currentIndex + 1) % iconContainers.length;
+
+    // ۳. اضافه کردن کلاس به عنصر جدید
+    const nextIcon = iconContainers[currentIndex];
+    nextIcon.classList.add(ANIMATION_CLASS);
+    nextIcon.classList.add("relative");
+  }
+
+  // اجرای تابع برای اولین بار (بعد از ۳ ثانیه) و سپس به صورت متناوب
+  setInterval(rotateAnimation, INTERVAL_SECONDS);
+});

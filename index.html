@@ -271,7 +271,7 @@
                   </a>
 
                   <div
-                    class="absolute flex justify-between items-center gap-5 w-[800px] h-auto -bottom-[236px] lg:-left-[600px] desktop:-left-[700px] rounded-2xl pt-9 scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                    class="absolute flex justify-between bg-white items-center gap-5 w-[800px] h-auto -bottom-[270px] lg:-left-[600px] desktop:-left-[700px] rounded-2xl pt-9 scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
                   >
                     <ul
                       class="w-full my-4 flex flex-col items-center justify-center"
@@ -517,7 +517,7 @@
                     وام
                   </a>
                   <div
-                    class="absolute flex justify-between items-center p-5 gap-5 w-[300px] h-auto -bottom-[150px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                    class="absolute flex justify-between bg-white items-center p-5 gap-5 w-[300px] h-auto -bottom-[170px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
                   >
                     <ul
                       class="w-full my-4 flex flex-col items-center justify-center"
@@ -591,7 +591,7 @@
                     >تماس با ما
                   </a>
                   <div
-                    class="absolute flex justify-between items-center p-5 gap-5 w-[300px] h-auto -bottom-[200px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
+                    class="-z-10 absolute flex justify-between bg-white items-center p-5 gap-5 w-[300px] h-auto -bottom-[200px] -left-[230px] rounded-2xl scale-y-0 group-hover:flex group-hover:scale-y-100 group-hover:transition-transform group-hover:delay-200 group-hover:ease-in group-hover:origin-top"
                   >
                     <ul
                       class="w-full my-4 flex flex-col items-center justify-center"
@@ -1024,7 +1024,7 @@
                 </figure>
                 <a
                   href=""
-                  class="p-3 flex items-center max-w-[200px] self-center md:self-end gap-5 rounded-[25px] group-hover:bg-brand hover:max-w-[200px] transition-colors delay-150 ease-in-out"
+                  class="p-3 flex items-center max-w-[200px] self-center md:self-start gap-5 rounded-[25px] group-hover:bg-brand hover:max-w-[200px] transition-colors delay-150 ease-in-out"
                 >
                   <span
                     class="hidden group-hover:inline-block scale-x-0 group-hover:scale-x-100 group-hover:text-white transition-all delay-200"
@@ -1085,7 +1085,7 @@
               </div>
               <a
                 href=""
-                class="p-3 mt-6 flex items-center max-w-[200px] gap-5 rounded-[25px] group-hover:bg-brand transition-all delay-300 ease-in-out self-center md:self-end"
+                class="p-3 flex items-center max-w-[200px] mt-6 self-center md:self-start gap-5 rounded-[25px] group-hover:bg-brand hover:max-w-[200px] transition-colors delay-150 ease-in-out"
               >
                 <span
                   class="hidden group-hover:inline-block scale-x-0 group-hover:scale-x-100 group-hover:text-white transition-all delay-200"
@@ -1110,10 +1110,69 @@
           </div>
         </div>
       </section>
+
+      <!--section Contact Us-->
+      <section class="bg-brand">
+        <div
+          class="container backgrond__image w-full h-full flex flex-col justify-between items-center md:flex-row"
+        >
+          <div class="text-white flex-col justify-end py-[48px] h-full">
+            <span class="block text-xs">بلو لاین</span>
+            <h2 class="text-3xl font-bold mb-[24px]">همیشه به وقت همه‌جا</h2>
+            <div class="mb-[50px] flex flex-col gap-4">
+              <div class="flex gap-5">
+                <div
+                  id="icon-1"
+                  class="icon-item w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
+                >
+                  <i class="ri-check-fill text-2xl text-brand"></i>
+                </div>
+                <p class="text-[20px] font-bold">7 روز هفته</p>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  id="icon-2"
+                  class="icon-item w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
+                >
+                  <i class="ri-check-fill text-2xl text-brand"></i>
+                </div>
+                <p class="text-[20px] font-bold">24 ساعت شبانه روز</p>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  id="icon-3"
+                  class="icon-item relative w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center rotating-border-external"
+                >
+                  <i class="ri-check-fill text-2xl text-brand"></i>
+                </div>
+                <p class="text-[20px] font-bold">چت آنلاین و تماس</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="block bg-white text-lg text-brand py-3 px-5 rounded-2xl font-medium text-center"
+              >ارتباط با بلولاین</a
+            >
+          </div>
+          <div>
+            <video
+              class="border-none"
+              src="./src/Video/slider.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- -->
+
+      <div class="h-[1000px]"></div>
     </main>
 
-    <!-- 
-    <div class="fixed bottom-0">
+    <!-- <div class="fixed bottom-0">
       <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
       <i class="ri-battery-charge-line"></i> <i class="ri-refund-2-line"></i>
       <i class="ri-receipt-line"></i> <i class="ri-bank-card-line"></i>

@@ -88,4 +88,42 @@
     @apply content-[''] absolute w-[50px] h-[50px] border-[2px] border-brand rounded-full 
            top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2; /* 👈 کلاس‌های جدید برای مرکزیت */
   }
+
+  /*slider second*/
+  .backgrond__image {
+    background: url("../images/Orbit.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /*border animation*/
+  @keyframes spin-around {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotating-border-external::after {
+    content: "";
+    position: absolute;
+    z-index: 0; /* مطمئن شوید زیر آیکون قرار می‌گیرد (در صورت لزوم) */
+
+    /* تنظیم موقعیت و اندازه برای قرار گرفتن در اطراف والد */
+    top: -3px;
+    left: -3px;
+    width: 36px; /* 30px والد + 5px از هر طرف = 40px */
+    height: 36px;
+    border-radius: 50%;
+
+    /* ایجاد Border چرخشی */
+    border: 3px solid transparent;
+    border-top-color: #0c0f14;
+    /* border-right-color: #0c0f14; */
+
+    /* اعمال انیمیشن چرخش */
+    animation: spin-around 3s linear infinite;
+  }
 }
