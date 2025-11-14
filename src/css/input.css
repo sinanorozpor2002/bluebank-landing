@@ -11,6 +11,30 @@
   }
 }
 
+@layer utilities {
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .icon-wrapper .spinner {
+    animation: spin 1.8s linear infinite;
+    transition: opacity 0.4s ease;
+  }
+
+  .icon-wrapper.active .spinner {
+    opacity: 1;
+  }
+
+  .rotating-border-external::after {
+    @apply content-[''] absolute -z-10 -top-[6px] -left-[6px] w-9 h-9 rounded-full border-4 border-transparent border-t-gray-900 animate-spin;
+  }
+}
+
 @layer components {
   /* Hamburger Icon */
   .custom-divider::before {
@@ -86,6 +110,34 @@
 
   .border--item::after {
     @apply content-[''] absolute w-[50px] h-[50px] border-[2px] border-brand rounded-full 
-           top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2; /* 👈 کلاس‌های جدید برای مرکزیت */
+           top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  /*section slider teaser-content*/
+  .backgrond__image {
+    @apply bg-[url('../images/Orbit.svg')] bg-no-repeat bg-center;
+  }
+
+  /*section Contact Us border animate*/
+
+  .teaser-content {
+    @apply bg-[url('../images/download.svg')] mt-40 rounded-xl bg-no-repeat bg-cover text-white;
+  }
+
+  /* section Support*/
+
+  .active-question {
+    @apply bg-brand text-white border-none;
+  }
+
+  .open--question {
+    @apply bg-brand-accent text-white;
+  }
+
+  .rotate--active {
+    @apply rotate-45 transition-transform delay-150;
+  }
+  .open-question--description {
+    @apply hidden scale-y-0;
   }
 }
