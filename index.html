@@ -39,7 +39,7 @@
               </a>
             </figure>
             <!-- nav mobile -->
-            <div
+            <nav
               class="menu__mobile desktop:hidden bg-white flex flex-col gap-y-5 -z-10 absolute w-full top-[70px] left-0 right-0 overflow-hidden overflow-y-scroll h-[400px] scale-y-0 transition-transform delay-200 origin-top pb-[60px]"
             >
               <ul class="flex flex-col justify-center">
@@ -257,7 +257,7 @@
                 class="self-center mt-[40px] desktop:mt-0 desktop:hidden py-3 px-5 border-[2px] border-brand rounded-md text-brand"
                 >دانلود و نصب بلو
               </a>
-            </div>
+            </nav>
             <!-- nav desktop -->
             <nav class="hidden desktop:block">
               <ul class="flex justify-center items-center w-full h-full gap-5">
@@ -1117,33 +1117,50 @@
           class="container backgrond__image w-full h-full flex flex-col justify-between items-center md:flex-row"
         >
           <div class="text-white flex-col justify-end py-[48px] h-full">
-            <span class="block text-xs">بلو لاین</span>
+            <span class="block text-base mb-3">بلو لاین</span>
             <h2 class="text-3xl font-bold mb-[24px]">همیشه به وقت همه‌جا</h2>
             <div class="mb-[50px] flex flex-col gap-4">
-              <div class="flex gap-5">
-                <div
-                  id="icon-1"
-                  class="icon-item w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
-                >
-                  <i class="ri-check-fill text-2xl text-brand"></i>
+              <!-- icon 1 -->
+              <div class="flex gap-5 items-center">
+                <div class="icon-wrapper relative w-[30px] h-[30px]">
+                  <div
+                    class="spinner absolute inset-0 -m-1 rounded-full border-4 border-transparent border-t-gray-800 opacity-0"
+                  ></div>
+                  <div
+                    class="icon-bg z-10 w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
+                  >
+                    <i class="ri-check-fill text-2xl text-brand"></i>
+                  </div>
                 </div>
                 <p class="text-[20px] font-bold">7 روز هفته</p>
               </div>
-              <div class="flex gap-5">
-                <div
-                  id="icon-2"
-                  class="icon-item w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
-                >
-                  <i class="ri-check-fill text-2xl text-brand"></i>
+
+              <!-- icon 2 -->
+              <div class="flex gap-5 items-center">
+                <div class="icon-wrapper relative w-[30px] h-[30px]">
+                  <div
+                    class="spinner absolute inset-0 -m-1 rounded-full border-4 border-transparent border-t-gray-800 opacity-0"
+                  ></div>
+                  <div
+                    class="icon-bg z-10 w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
+                  >
+                    <i class="ri-check-fill text-2xl text-brand"></i>
+                  </div>
                 </div>
                 <p class="text-[20px] font-bold">24 ساعت شبانه روز</p>
               </div>
-              <div class="flex gap-5">
-                <div
-                  id="icon-3"
-                  class="icon-item relative w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center rotating-border-external"
-                >
-                  <i class="ri-check-fill text-2xl text-brand"></i>
+
+              <!-- icon 3 -->
+              <div class="flex gap-5 items-center">
+                <div class="icon-wrapper relative w-[30px] h-[30px]">
+                  <div
+                    class="spinner absolute inset-0 -m-1 rounded-full border-4 border-transparent border-t-gray-800 opacity-0"
+                  ></div>
+                  <div
+                    class="icon-bg z-10 w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center"
+                  >
+                    <i class="ri-check-fill text-2xl text-brand"></i>
+                  </div>
                 </div>
                 <p class="text-[20px] font-bold">چت آنلاین و تماس</p>
               </div>
@@ -1167,29 +1184,434 @@
         </div>
       </section>
 
-      <!-- -->
+      <!--section Social Media -->
 
-      <div class="h-[1000px]"></div>
+      <section class="container relative mt-24">
+        <h2
+          class="text-[32px] font-bold text-text-heading text-center mb-[80px]"
+        >
+          ما را در شبکه‌های اجتماعی دنبال کنید
+        </h2>
+        <div class="swiper mySwiper-social">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="p-6 flex flex-col justify-between h-full text-theme-dark"
+              >
+                <p class="text-lg leading-relaxed line-clamp-2">
+                  اگه blubank_com@ نبود میخواستیم چه خاکی به سرمون بریزیم
+                  واقعا؟! واسه فعالسازی یه چسه اپ همراه بانک باید تا ظهور مهدی
+                  بشینم تا سیستمشون وصل شه!
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                  <div class="flex flex-col text-sm">
+                    <p class="font-bold">Drkiumars1996</p>
+                    <p class="text-xs opacity-80">شهریور ۱۴۰۳</p>
+                  </div>
+                  <div class="text-2xl">
+                    <i class="ri-instagram-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="p-6 flex flex-col justify-between h-full text-theme-dark"
+              >
+                <p class="text-lg leading-relaxed line-clamp-2">
+                  بلوبانک همه چی تمومه تو مشتری مداری من از وقتی اومدم تو بلو
+                  کیف می‌کنم واقعا بانک خوبی دارین دایی جان 😂
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                  <div class="flex flex-col text-sm">
+                    <p class="font-bold">iliya_4049</p>
+                    <p class="text-xs opacity-80">خرداد ۱۴۰۳</p>
+                  </div>
+                  <div class="text-2xl">
+                    <i class="ri-twitter-x-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="p-6 flex flex-col justify-between h-full text-theme-dark"
+              >
+                <p class="text-lg leading-relaxed line-clamp-2">
+                  تجربه پرداخت سریع با بلوبانک خیلی خوب بود، کاش همه بانکا اینو
+                  پیاده کنن.
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                  <div class="flex flex-col text-sm">
+                    <p class="font-bold">arasooooli</p>
+                    <p class="text-xs opacity-80">مرداد ۱۴۰۳</p>
+                  </div>
+                  <div class="text-2xl">
+                    <i class="ri-instagram-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="p-6 flex flex-col justify-between h-full text-theme-dark"
+              >
+                <p class="text-lg leading-relaxed line-clamp-2">
+                  آقا این باکس‌های بلو خیلی باحاله، آدم دوست داره هی باکس بسازه
+                  پولاشو توش ذخیره کنه، من پولای سفرمو همیشه اونجا میذارم 😍
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                  <div class="flex flex-col text-sm">
+                    <p class="font-bold">sabaaaaa21</p>
+                    <p class="text-xs opacity-80">مهر ۱۴۰۳</p>
+                  </div>
+                  <div class="text-2xl">
+                    <i class="ri-twitter-x-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div
+                class="p-6 flex flex-col justify-between h-full text-theme-dark"
+              >
+                <p class="text-lg leading-relaxed line-clamp-2">
+                  بلوبانک همه چی تمومه تو مشتری مداری من از وقتی اومدم تو بلو
+                  کیف می‌کنم واقعا بانک خوبی دارین دایی جان 😂
+                </p>
+                <div class="flex justify-between items-center mt-4">
+                  <div class="flex flex-col text-sm">
+                    <p class="font-bold">iliya_4049</p>
+                    <p class="text-xs opacity-80">خرداد ۱۴۰۳</p>
+                  </div>
+                  <div class="text-2xl">
+                    <i class="ri-instagram-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--section slider teaser-content-->
+
+      <section class="container mt-24">
+        <div
+          class="w-full h-full flex flex-col md:flex-row justify-between teaser-content p-5"
+        >
+          <div class="p-12 flex flex-col content-center md:content-start">
+            <h2 class="text-4xl font-bold mb-4">جای شما در بلو [ ] خالی‌ست</h2>
+            <p class="text-lg pb-8">
+              همین حالا در کمتر از ۷ دقیقه حساب بلو باز کنید.
+            </p>
+            <a
+              href="#"
+              class="inline-block max-w-[230px] bg-white text-lg text-brand py-3 px-5 rounded-2xl font-medium text-center"
+            >
+              <span class="inline-block">دانلود اپلیکیشن بلو</span>
+            </a>
+          </div>
+          <figure class="max-w-[500px] scale-125">
+            <img src="./src/images/blu-image-teaser.webp" alt="" />
+          </figure>
+        </div>
+      </section>
+
+      <!--section Support-->
+      <section class="container mt-24">
+        <div class="flex flex-col w-full">
+          <div class="flex flex-col gap-4 items-center">
+            <h3
+              class="p-2 max-w-[130px] bg-success text-white text-center rounded-3xl"
+            >
+              سوالات متداول
+            </h3>
+            <h2 class="text-[32px] font-bold">سوالی برات پیش اومده ؟</h2>
+            <p class="text-base leading-[28px] text-text-muted">
+              پاسخ سوالات خود را از دسته‌بندی‌های زیر پیدا کنید
+            </p>
+          </div>
+          <div
+            id="tab-buttons-container"
+            class="flex gap-3 mt-6 flex-wrap items-center text-[#718e9c] text-lg"
+          ></div>
+          <div id="question__box" class="flex flex-col gap-y-5 mt-9"></div>
+        </div>
+      </section>
+
+      <!--footer-->
+      <footer class="">
+        <!-- Main Footer -->
+        <div class="bg-[#F2F5F6] shadow-[0_0_0_1px_#e5e7eb]">
+          <div class="container">
+            <div class="w-full flex flex-col gap-y-12">
+              <div class="flex justify-between items-center mt-[20px]">
+                <figure>
+                  <img src="./src/images/footer-logo.svg" alt="" />
+                </figure>
+                <div
+                  id="scroll__top"
+                  class="p-4 cursor-pointer border-brand-accent border-[1px] -rotate-90 rounded-xl transition-opacity duration-300 ease-out hover:scale-110"
+                >
+                  <i
+                    class="ri-arrow-right-long-line text-brand-accent text-3xl"
+                  ></i>
+                </div>
+              </div>
+              <div
+                class="w-full flex flex-col md:flex-row gap-y-10 justify-between"
+              >
+                <div
+                  class="w-full flex md:justify-start justify-center gap-x-5 items-center"
+                >
+                  <div>
+                    <h2 class="text-base font-bold mb-[20px]">خدمات</h2>
+                    <ul>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">شارژ حساب</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">انتقال وجه</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">باکس</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">پرداخت قبوض</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">خرید شارژ</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">دعوت از دوستان</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">مدیریت مالی</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 class="text-base font-bold mb-[20px]">وام</h2>
+                    <ul>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام ازدواج</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام ودیعه مسکن</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام فرزندآوری</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام بهزیستی</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام کمیته امداد</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">وام سریع و آسان بلو</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">بلو</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h2 class="text-base font-bold mb-[20px]">بلو</h2>
+                    <ul>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">موقعیت‌های شغلی</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">سوالات متداول</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">بلو جونیور</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">ارتباط با ما</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">درباره ما</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">همکاری با ما</a>
+                      </li>
+                      <li
+                        class="text-text-muted mb-4 cursor-pointer hover:font-bold"
+                      >
+                        <a href="#">بلاگ</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="w-full flex justify-center md:justify-end">
+                  <div class="max-w-[370px] w-full">
+                    <h2
+                      class="mb-7 text-text-heading text-2xl font-semibold text-center"
+                    >
+                      بلو؛ بانک ولی دوست‌داشتنی
+                    </h2>
+                    <div
+                      class="w-full bg-brand-link p-3 text-center rounded-2xl"
+                    >
+                      <a class="inline-block text-white text-lg" href="#">
+                        دانلود و نصب بلو
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Footer -->
+        <div class="bg-[#e4eaec; ] mt-14">
+          <div class="container">
+            <div
+              class="flex justify-between flex-col items-center gap-y-11 md:flex-row"
+            >
+              <div
+                class="flex gap-8 text-text-subhead flex-col gap-y-5 mobile:flex-row"
+              >
+                <div class="flex gap-4">
+                  <figure>
+                    <img src="./src/images/phone.svg" alt="" />
+                  </figure>
+                  <p>۰۲۱-۹۱۰۳۶۰۶۰ پشتیبانی: ۰۲۱-۸۷۶۴۱</p>
+                </div>
+                <div class="flex gap-4">
+                  <figure>
+                    <img src="./src/images/map-marker.svg" alt="" />
+                  </figure>
+                  <p>تهران، خ نلسون ماندلا، خ شهید رحیمی، پلاک ۴۳</p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <figure class="px-4">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/instagram.svg"
+                    alt=""
+                  />
+                </figure>
+                <figure class="px-4 border-r">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/aparat.svg"
+                    alt=""
+                  />
+                </figure>
+                <figure class="px-4 border-r">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/linkedin.svg"
+                    alt=""
+                  />
+                </figure>
+                <figure class="px-4 border-r">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/telegram.svg"
+                    alt=""
+                  />
+                </figure>
+                <figure class="px-4 border-r">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/twitter.svg"
+                    alt=""
+                  />
+                </figure>
+                <figure class="px-4 border-r">
+                  <img
+                    class="w-[32px] h-[32px]"
+                    src="./src/images/Social Media/youtube.svg"
+                    alt=""
+                  />
+                </figure>
+              </div>
+            </div>
+            <!--bottom -->
+            <div
+              class="mt-20 flex justify-between flex-col md:flex-row gap-y-8"
+            >
+              <div class="flex md:flex-row flex-col gap-y-4">
+                <p class="px-4">© 2020 - 2025 blubank Saman</p>
+                <p class="px-4 border-r">
+                  تمام حقوق مادی و معنوی برای
+                  <a href="#" class="text-brand">بلوبانک سامان</a> محفوظ است.
+                </p>
+              </div>
+              <div class="flex">
+                <a
+                  class="pl-4 text-sm md:text-base font-medium cursor-pointer text-gray-500 hover:text-text-muted"
+                  >حریم خصوصی</a
+                >
+                <a
+                  class="px-4 text-sm md:text-base font-medium cursor-pointer text-gray-500 border-r hover:text-text-muted"
+                  >قوانین و مقررات</a
+                >
+                <a
+                  class="px-4 text-sm md:text-base font-medium cursor-pointer text-gray-500 border-r hover:text-text-muted"
+                  >فروش و بازپرداخت</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
 
-    <!-- <div class="fixed bottom-0">
-      <i class="ri-arrow-left-right-line"></i> <i class="ri-wallet-line"></i>
-      <i class="ri-battery-charge-line"></i> <i class="ri-refund-2-line"></i>
-      <i class="ri-receipt-line"></i> <i class="ri-bank-card-line"></i>
-      <i class="ri-user-add-line"></i> <i class="ri-divide-line"></i>
-      <i class="ri-archive-line"></i> <i class="ri-folders-line"></i>
-      <i class="ri-folder-shield-2-line"></i> <i class="ri-car-line"></i>
-      <i class="ri-p2p-line"></i> <i class="ri-team-line"></i>
-      <i class="ri-briefcase-line"></i> <i class="ri-arrow-left-line"></i>
-      <i class="ri-arrow-right-s-line"></i> <i class="ri-arrow-left-s-line"></i>
-      <i class="ri-user-star-line"></i>
-      <i class="ri-arrow-left-up-long-line"></i> <i class="ri-check-fill"></i>
-      <i class="ri-instagram-line"></i> <i class="ri-twitter-x-line"></i>
-      <i class="ri-question-mark"></i> <i class="ri-add-large-line"></i>
-      <i class="ri-arrow-right-long-line"></i>
-    </div> -->
     <script src="./src/js/app.js"></script>
     <script src="/src/js/plugins/swiper-bundle.min.js"></script>
+    <!--swiper slider section 1-->
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -1200,12 +1622,36 @@
           clickable: true,
         },
         autoplay: {
-          delay: 3000, // اسلاید هر 3000 میلی‌ثانیه (3 ثانیه) عوض می‌شود
-          disableOnInteraction: false, // حتی اگر کاربر با اسلایدر تعامل داشت، Autoplay متوقف نشود
+          delay: 3000,
+          disableOnInteraction: false,
         },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!--swiper slider section 2-->
+    <script>
+      var swiper = new Swiper(".mySwiper-social", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
         },
       });
     </script>
