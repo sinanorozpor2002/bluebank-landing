@@ -215,21 +215,17 @@ document.addEventListener("DOMContentLoaded", () => {
   if (wrappers.length === 0) return;
 
   let currentIndex = 0;
-  const interval = 3000; // هر ۳ ثانیه
+  const interval = 3000;
 
   function startRotation() {
-    // اول همه رو غیرفعال کن
     wrappers.forEach((w) => w.classList.remove("active"));
 
-    // فعال کردن آیکون فعلی
     wrappers[currentIndex].classList.add("active");
 
-    // برو به بعدی
     currentIndex = (currentIndex + 1) % wrappers.length;
   }
 
-  // شروع انیمیشن (آیکون اول از همون اول فعال باشه یا نه؟)
-  startRotation(); // اگر می‌خوای از اول شروع بشه
+  startRotation();
   setInterval(startRotation, interval);
 });
 //section question--section
@@ -243,12 +239,12 @@ const tabData = [
   {
     text: "بازکردن حساب",
     dataTab: "open-account",
-    maxWidthClass: "max-w-[150px]",
+    maxWidthClass: "max-w-[165px]",
   },
   {
     text: "کارت بانکی",
     dataTab: "card",
-    maxWidthClass: "max-w-[130px]",
+    maxWidthClass: "max-w-[140px]",
   },
   {
     text: "وام",
@@ -258,7 +254,7 @@ const tabData = [
   {
     text: "حساب کاربری",
     dataTab: "profile",
-    maxWidthClass: "max-w-[140px]",
+    maxWidthClass: "max-w-[160px]",
   },
   {
     text: "تراکنش‌ها",
@@ -268,7 +264,7 @@ const tabData = [
   {
     text: "انتقال وجه",
     dataTab: "transfer",
-    maxWidthClass: "max-w-[130px]",
+    maxWidthClass: "max-w-[145px]",
   },
   {
     text: "بلوجونیور",
@@ -278,7 +274,7 @@ const tabData = [
   {
     text: "خدمات خودرو",
     dataTab: "car-services",
-    maxWidthClass: "max-w-[140px]",
+    maxWidthClass: "max-w-[160px]",
   },
 ];
 
@@ -303,6 +299,7 @@ if (container) {
 
     const span = document.createElement("span");
     span.textContent = item.text;
+    span.classList.add("w-[130px]", "block", "text-center", "md:w-full");
 
     tabDiv.appendChild(span);
 
@@ -606,7 +603,7 @@ function renderQuestions(tabKey) {
         <div class="flex flex-col gap-7 cursor-pointer hover:shadow-[inset_0_0_0_4px_rgba(78,145,230,0.2)] rounded-xl" id="open--question">
           <div class="flex items-center gap-5 px-[30px] py-[50px]">
             <i id="active__plus" class="ri-add-large-line text-2xl text-brand-dark"></i>
-            <p class="text-2xl font-semibold">${q.question}</p>
+            <p class="md:text-2xl text-sm font-semibold">${q.question}</p>
           </div>
           <div id="question__answer" class="open-question--description border-r border-b-gray-400 p-4 text-lg font-medium leading-[32px]">
             ${
