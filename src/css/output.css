@@ -1069,6 +1069,30 @@ swiper-slide img {
   top: 70px;
 }
 
+.-bottom-\[250px\] {
+  bottom: -250px;
+}
+
+.-bottom-\[230px\] {
+  bottom: -230px;
+}
+
+.-bottom-\[300px\] {
+  bottom: -300px;
+}
+
+.-bottom-\[290px\] {
+  bottom: -290px;
+}
+
+.-bottom-\[240px\] {
+  bottom: -240px;
+}
+
+.-bottom-\[260px\] {
+  bottom: -260px;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1241,12 +1265,12 @@ swiper-slide img {
   margin-top: 150px;
 }
 
-.mt-\[40px\] {
-  margin-top: 40px;
-}
-
 .mt-\[20px\] {
   margin-top: 20px;
+}
+
+.mt-\[40px\] {
+  margin-top: 40px;
 }
 
 .line-clamp-2 {
@@ -1468,6 +1492,10 @@ swiper-slide img {
   width: 100%;
 }
 
+.w-\[350px\] {
+  width: 350px;
+}
+
 .max-w-10 {
   max-width: 2.5rem;
 }
@@ -1534,6 +1562,14 @@ swiper-slide img {
 
 .max-w-\[644px\] {
   max-width: 644px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .flex-shrink {
@@ -2975,6 +3011,10 @@ swiper-slide img {
 
 .hover\:max-w-\[200px\]:hover {
   max-width: 200px;
+}
+
+.hover\:max-w-\[250px\]:hover {
+  max-width: 250px;
 }
 
 .hover\:scale-110:hover {
