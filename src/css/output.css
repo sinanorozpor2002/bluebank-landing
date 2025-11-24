@@ -1504,12 +1504,20 @@ swiper-slide img {
   max-width: 130px;
 }
 
+.max-w-\[140px\] {
+  max-width: 140px;
+}
+
+.max-w-\[145px\] {
+  max-width: 145px;
+}
+
 .max-w-\[160px\] {
   max-width: 160px;
 }
 
-.max-w-\[170px\] {
-  max-width: 170px;
+.max-w-\[165px\] {
+  max-width: 165px;
 }
 
 .max-w-\[230px\] {
@@ -1542,22 +1550,6 @@ swiper-slide img {
 
 .max-w-\[644px\] {
   max-width: 644px;
-}
-
-.max-w-\[150px\] {
-  max-width: 150px;
-}
-
-.max-w-\[140px\] {
-  max-width: 140px;
-}
-
-.max-w-\[165px\] {
-  max-width: 165px;
-}
-
-.max-w-\[145px\] {
-  max-width: 145px;
 }
 
 .flex-shrink {
@@ -2956,12 +2948,24 @@ swiper-slide img {
   transition-delay: 300ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
 
 .duration-700 {
   transition-duration: 700ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
 }
 
 .ease-in {
@@ -3098,6 +3102,10 @@ swiper-slide img {
   transition-delay: 200ms;
 }
 
+.group:hover .group-hover\:duration-200 {
+  transition-duration: 200ms;
+}
+
 .group:hover .group-hover\:ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3199,6 +3207,11 @@ swiper-slide img {
     overflow-x: visible;
   }
 
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-\[18px\] {
     font-size: 18px;
   }
@@ -3210,11 +3223,6 @@ swiper-slide img {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
