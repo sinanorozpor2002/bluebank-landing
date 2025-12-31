@@ -2602,6 +2602,10 @@ swiper-slide img {
   padding-top: 2.25rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2948,6 +2952,10 @@ swiper-slide img {
   transition-delay: 300ms;
 }
 
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -2956,16 +2964,12 @@ swiper-slide img {
   transition-duration: 300ms;
 }
 
-.duration-700 {
-  transition-duration: 700ms;
-}
-
-.duration-150 {
-  transition-duration: 150ms;
-}
-
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-in {
@@ -3096,10 +3100,6 @@ swiper-slide img {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.group:hover .group-hover\:delay-200 {
-  transition-delay: 200ms;
 }
 
 .group:hover .group-hover\:duration-200 {
